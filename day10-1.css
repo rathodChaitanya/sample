@@ -1,0 +1,80 @@
+.Navi{
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(57, 0, 125, 0.9);
+   
+}
+.logoimg{
+    height: 3rem;
+}
+.logo {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.4rem;
+    flex-grow: 1;
+}
+.menu{
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+button{
+    border-radius: 10px;
+    border: 2px solid wheat;
+    background-color: rgba(57, 0, 125, 0.9);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.page-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: pink;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.login-box{
+    background-color: white;
+    padding: 4rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 15 rem;
+
+}
+.input-control {
+    width: 16rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 0px;
+    border-bottom: 1px solid black;
+}
+
+.input-box {
+    margin-bottom: 0.8rem;
+}
+
+.btn {
+    width: 17.7rem;
+    padding: 0.8rem;
+    background-color: blue;
+    border: 0px;
+    color: white;
+    font-size: 1rem;
+}
+
+.header{
+    font-size: 4.5rem;
+    margin-right: 0.8rem;
+    color: blue;
+}
