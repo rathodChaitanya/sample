@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>books DOM</title>
+	<script type="text/javascript">
+		var books=[]
+		function save(){
+			var name = document.getElementById("name").value		
+			var price = document.getElementById("price").value		
+			var author = document.getElementById("author").value		
+			var obj ={
+				name :name,
+				price : price,
+				author : author
+			}
+			books.push(obj)
+		}
+
+		function display(){
+			var tableStr = ""
+			for (var i = 0; i < books.length; i++) {
+				tableStr = tableStr + "<tr><td>"+books[i].name+"</td><td>"+books[i].price+"</td><td>"+books[i].author+"</td></tr>"
+			}
+			
+			document.getElementById("table-body").innerHTML = tableStr
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text"  id="name" placeholder="Book Name">
+	<input type="number"  id="price" placeholder="price">
+	<input type="text"  id="author" placeholder="author">
+	<button onclick="save()">Save</button>
+	<button onclick="display()">display</button>
+	<table border="1">
+		<thead>
+			<tr>
+				<td> Book_Name </td>
+				<td> Book_Price </td>
+				<td> Book_Author</td>
+			</tr>			
+		</thead>
+		<tbody id="table-body">
+				
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

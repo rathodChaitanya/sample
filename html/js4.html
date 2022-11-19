@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+
+
+var operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+
+var number1 = parseFloat(prompt('Enter first number: '))
+var number2 = parseFloat(prompt('Enter second number: '));
+
+var result;
+
+
+if (operator == '+') {
+    result = number1 + number2;
+    document.write(result)
+}
+else if (operator == '-') {
+    result = number1 - number2;
+    document.write(result)
+}
+else if (operator == '*') {
+    result = number1 * number2;
+    document.write(result)
+}
+else {
+    result = number1 / number2;
+    document.write(result)
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>employee DOM</title>
+	<script type="text/javascript">
+		var employee=[]
+		function save(){
+			var name = document.getElementById("name").value
+            var gender_arr = document.getElementsByClassName("gender")		
+			var birth_date = document.getElementById("birth_date").value		
+			
+            var gender = ""
+			if(gender_arr[0].checked){
+				gender = gender_arr[0].value
+			}else if(gender_arr[1].checked){
+				gender = gender_arr[1].value
+			}else if(gender_arr[2].checked){
+				gender = gender_arr[2].value
+			}	
+			var obj ={
+				name :name,
+				birth_date : birth_date,
+				gender : gender
+			}
+			employee.push(obj)
+		}
+
+		function display(){
+			var tableStr = ""
+			for (var i = 0; i < employee.length; i++) {
+				tableStr = tableStr + "<tr><td>"+employee[i].name+"</td><td>"+employee[i].birth_date+"</td><td>"+employee[i].gender+"</td></tr>"
+			}
+			/*
+				<tr><td>RRR</td><td>22/10/2000</td><td>JrNTR</td></tr>
+				<tr><td>Avengers</td><td>22/11/2000</td><td>RDJ</td></tr>
+			*/
+			document.getElementById("table-body").innerHTML = tableStr
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text"  id="name" placeholder="Name">
+    <br>
+	Gender
+	<input type="radio" class="gender" name="gender" value="male" >Male
+	<input type="radio" class="gender" name="gender" value="female" >Female
+	<input type="radio" class="gender" name="gender" value="others">Others
+	<br>
+	<input type="date"  id="birth_date" placeholder="birth date">
+	<button onclick="save()">Save</button>
+	<button onclick="display()">display</button>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Gender </td>
+				<td>birth_date</td>
+			</tr>			
+		</thead>
+		<tbody id="table-body">
+				
+		</tbody>
+	</table>
+</body>
+</html>
